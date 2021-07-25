@@ -401,6 +401,7 @@
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Ceramics</li>
+      <li>Ceramics</li>
     </mods>
       <match Class="PatchOperationSequence">
       <operations>
@@ -423,6 +424,7 @@
                   <temperatureIdeal>7.0~45.0</temperatureIdeal>
                   <maxCapacity>35</maxCapacity>
                   <processDays>0.67</processDays>
+                  <processType>MultipleMixed</processType>
                 </li>
               </processes>
             </li>
@@ -446,6 +448,7 @@
                   <usesTemperature>false</usesTemperature>
                   <maxCapacity>30</maxCapacity>
                   <processDays>0.75</processDays>
+                  <processType>MultipleMixed</processType>
                 </li>
               </processes>
             </li>
@@ -466,6 +469,7 @@
                   <usesTemperature>false</usesTemperature>
                   <maxCapacity>50</maxCapacity>
                   <processDays>0.67</processDays>
+                  <processType>MultipleMixed</processType>
                 </li>
               </processes>
             </li>
@@ -486,6 +490,7 @@
                   <usesTemperature>false</usesTemperature>
                   <maxCapacity>80</maxCapacity>
                   <processDays>0.57</processDays>
+                  <processType>MultipleMixed</processType>
                 </li>
               </processes>
             </li>
@@ -548,6 +553,7 @@
         <li Class="PatchOperationAdd">
         <xpath>*/ThingDef[defName = "UniversalFermenter"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes</xpath>
           <value>
+
             <li>
               <thingDef>VFEM_Wine</thingDef>
               <ingredientFilter>
@@ -558,11 +564,16 @@
               <maxCapacity>10</maxCapacity>
               <usesQuality>true</usesQuality>
               <qualityDays>(1, 3, 8, 14, 20, 50, 120)</qualityDays>
+
+                  <processType>Multiple</processType>
+
             </li>
+
           </value>
         </li>
         <li Class="PatchOperationRemove">
           <xpath>*/WorkGiverDef[defName = "VFEM_TakeBeerOutOfWineBarrel" or defName = "VFEM_FillWineBarrel"]</xpath>
+
         </li>
       </operations>
       </match>
@@ -661,6 +672,7 @@
                   <maxCapacity>150</maxCapacity>
                   <processDays>2</processDays>
                   <graphicSuffix>Full</graphicSuffix>
+                  <processType>MultipleMixed</processType>
                 </li>
               </processes>
             </li>
@@ -680,6 +692,7 @@
                   </ingredientFilter>
                   <processDays>2</processDays>
                   <graphicSuffix>Full</graphicSuffix>
+                  <processType>MultipleMixed</processType>
                 </li>
               </processes>
             </li>
