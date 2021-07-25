@@ -431,12 +431,12 @@ namespace UniversalFermenter
 
             if (ruinedPercent > 0.05f)
             {
-                creatingTip.AppendTagged("UF_CreatingTooltip5".Translate(ruinedPercent.ToStringPercent().Colorize(ColoredText.RedReadable)));
+                creatingTip.AppendTagged("UF_CreatingTooltip5".Translate(ruinedPercent.ToStringPercent().Colorize(ColorLibrary.RedReadable)));
             }
 
             if (!Process.temperatureSafe.Includes(fermenter.parent.AmbientTemperature) && !Ruined)
             {
-                creatingTip.Append("UF_CreatingTooltip6".Translate(fermenter.parent.AmbientTemperature.ToStringTemperature()).Resolve().Colorize(ColoredText.RedReadable));
+                creatingTip.Append("UF_CreatingTooltip6".Translate(fermenter.parent.AmbientTemperature.ToStringTemperature()).Resolve().Colorize(ColorLibrary.RedReadable));
             }
 
             return creatingTip.ToString();

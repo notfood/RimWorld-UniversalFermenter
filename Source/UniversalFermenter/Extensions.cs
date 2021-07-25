@@ -13,7 +13,7 @@ namespace UniversalFermenter
 
         public static readonly List<Pair<float, Color>> GreenToYellowToRed = new List<Pair<float, Color>>
         {
-            new Pair<float, Color>(0, ColoredText.RedReadable),
+            new Pair<float, Color>(0, ColorLibrary.RedReadable),
             new Pair<float, Color>(0.5f, Color.yellow),
             new Pair<float, Color>(1, Color.green)
         };

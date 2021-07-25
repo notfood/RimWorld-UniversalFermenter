@@ -431,7 +431,7 @@ namespace UniversalFermenter
                     else if (!Empty)
                     {
                         bool overheating = ambientTemperature < singleDef.temperatureSafe.TrueMin; 
-                        str.AppendFormat(" ({0}{1})".Colorize(overheating ? ColoredText.RedReadable : Color.blue),
+                        str.AppendFormat(" ({0}{1})".Colorize(overheating ? ColorLibrary.RedReadable : Color.blue),
                             overheating ? "Freezing".TranslateSimple() : "Overheating".TranslateSimple(),
                             progresses.Count == 1 && progresses[0].Process.processType == ProcessType.Single ? $" {progresses[0].ruinedPercent.ToStringPercent()}" : "");
                     }

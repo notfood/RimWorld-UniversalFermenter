@@ -7,7 +7,7 @@ namespace UniversalFermenter
 {
     public class ITab_UFIngredientFilter : ITab
     {
-        private Vector2 scrollPosition;
+        private ThingFilterUI.UIState thingFilterState = new ThingFilterUI.UIState();
         private readonly Rect area;
         private readonly Rect configRect;
 
@@ -32,7 +32,7 @@ namespace UniversalFermenter
             fermenter.ParentProductFilter.allowedHitPointsConfigurable = false;
             fermenter.ParentProductFilter.allowedQualitiesConfigurable = false;
 
-            ThingFilterUI.DoThingFilterConfigWindow(configRect, ref scrollPosition, fermenter.IngredientFilter, fermenter.ParentIngredientFilter, 8);
+            ThingFilterUI.DoThingFilterConfigWindow(configRect, thingFilterState, fermenter.IngredientFilter, fermenter.ParentIngredientFilter, 8);
 
             GUI.EndGroup();
         }
