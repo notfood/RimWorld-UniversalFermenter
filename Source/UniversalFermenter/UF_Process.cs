@@ -77,6 +77,7 @@ namespace UniversalFermenter
         public FloatRange temperatureSafe = new FloatRange(-1f, 32f);
 
         /// <summary>The thing that is created at the end of the fermentation process.</summary>
+        [RimWorld.MayRequire("ludeon.please.give.BadCrossRefAllowed")]
         public ThingDef? thingDef;
 
         /// <summary>A unique ID for the fermentation process, mainly for multiplayer.</summary>

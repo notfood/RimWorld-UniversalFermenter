@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Vanilla Factions Expanded - Vikings | OskarPotocki.VFE.Vikings -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Vanilla Factions Expanded - Vikings</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationRemove">
+          <xpath>/Defs/ThingDef[defName = "VFEV_MeadFermentingBarrel"]/designationCategory</xpath>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingDef[defName = "UniversalFermenter"]/comps/li[@Class="UniversalFermenter.CompProperties_UniversalFermenter"]/processes</xpath>
+          <value>
+            <li>
+              <thingDef>VFEV_Mead</thingDef>
+              <ingredientFilter>
+                <thingDefs>
+                  <li>VFEV_Honey</li>
+                </thingDefs>
+              </ingredientFilter>
+              <maxCapacity>75</maxCapacity>
+              <processDays>7.7</processDays>
+              <efficiency>0.333</efficiency>
+              <usesQuality>false</usesQuality>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+
+</Patch>
