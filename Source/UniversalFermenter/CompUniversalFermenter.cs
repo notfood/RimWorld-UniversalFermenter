@@ -443,14 +443,14 @@ namespace UniversalFermenter
                     {
                         if (ambientTemperature > progress.Process.temperatureSafe.TrueMax)
                         {
-                            str.AppendFormat(" ({0})", "Freezing".TranslateSimple());
+                            str.AppendFormat(" ({0})", "Overheating".TranslateSimple());
                             abort = true;
                             break;
                         }
 
                         if (ambientTemperature < progress.Process.temperatureSafe.TrueMin)
                         {
-                            str.AppendFormat(" ({0})", "Overheating".TranslateSimple());
+                            str.AppendFormat(" ({0})", "Freezing".TranslateSimple());
                             abort = true;
                             break;
                         }
@@ -462,7 +462,7 @@ namespace UniversalFermenter
                         {
                             if (progress.Process.temperatureIdeal.Includes(ambientTemperature))
                             {
-                                str.AppendFormat(" ({0})", "UF_Safe".TranslateSimple());
+                                str.AppendFormat(" ({0})", "UF_Ideal".TranslateSimple());
                                 abort = true;
                                 break;
                             }
@@ -471,7 +471,7 @@ namespace UniversalFermenter
 
                     if (!abort)
                     {
-                        str.AppendFormat(" ({0})", "UF_Idea".TranslateSimple());
+                        str.AppendFormat(" ({0})", "UF_Safe".TranslateSimple());
                     }
                 }
 
